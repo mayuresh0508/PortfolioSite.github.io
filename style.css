@@ -1,10 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit&family=Noto+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
+
+#blob{
+  height: 500px;
+  aspect-ratio: 1/1;
+  background-image: linear-gradient(to right, aqua , orange);
+  border-radius: 50%;
+  position: fixed;
+  left: 50%;
+  right: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  /* animation: rotate 10s infinite; */
+}
+#blur{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  backdrop-filter: blur(150px);
+  z-index: 2;
+}
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  50%{
+    scale: 1 1.2;
+    left: -50%;
+    right: -50%; 
+    transform: translate(50%, 50%);
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+.website{
+  position: absolute;
+  z-index: 5;
+}
+
+body{
+  background-color: #000428;
+}
+
 * {
   padding: 0;
   margin: 0;
-  background-color: #000428;
   color: #eddbff;
   font-family: "Noto Sans", sans-serif;
   scroll-behavior: smooth;
@@ -12,10 +54,12 @@
 
 .nav {
   height: 80px;
-  background-image: linear-gradient(180deg, black, #000428);
+  background-image: linear-gradient(180deg, rgb(0, 0, 0), #00000000);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  width: 100%;
 }
 .left-nav {
   font-family: "Noto Sans", sans-serif;
@@ -184,7 +228,8 @@ ul > li > a:hover {
   box-shadow: 10px 0px 10px rgb(0, 18, 73);
   width: 355px;
   height: 200px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #000428a0;
+
   box-shadow: 0 0 10px rgba(255, 177, 31, 0.665);
   border-radius: 10px;
   padding: 10px;
@@ -318,6 +363,8 @@ ul > li > a:hover {
   flex-direction: column;
   border-radius: 2%;
   box-shadow: 5px 5px 20px rgb(0, 0, 0);
+  background-color: #000428a0;
+
 }
 .na-em {
   display: flex;
@@ -444,8 +491,8 @@ textarea {
 /* FOOTER */
 .footer {
   height: 300px;
-  width: 99vw;
-  background-image: linear-gradient(180deg, #000428, black);
+  width: 100%;
+  background-image: linear-gradient(180deg, #00000000, black);
   font-family: "Kanit", sans-serif;
   font-size: 1.1rem;
   padding-bottom: 20px;
