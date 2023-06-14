@@ -119,6 +119,7 @@ ul > li > a:hover {
   align-items: center;
   height: 90vh;
   font-size: 3rem;
+  margin-top: 50px;
 }
 .home-right > img {
   border-radius: 50px;
