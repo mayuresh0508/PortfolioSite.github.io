@@ -9,7 +9,7 @@
   border-radius: 50%;
   position: fixed;
   left: 50%;
-  right: 50%; 
+  top: 50%; 
   transform: translate(-50%, -50%);
   z-index: 1;
   /* animation: rotate 10s infinite; */
@@ -21,15 +21,18 @@
   backdrop-filter: blur(150px);
   z-index: 2;
 }
+@media (max-width: 600px){
+  #blur{
+  height: 150vh;
+  }
+}
+
 @keyframes rotate {
   from {
     rotate: 0deg;
   }
   50%{
     scale: 1 1.2;
-    left: -50%;
-    right: -50%; 
-    transform: translate(50%, 50%);
   }
   to {
     rotate: 360deg;
@@ -54,17 +57,20 @@ body{
 
 .nav {
   height: 80px;
-  background-image: linear-gradient(180deg, rgb(0, 0, 0), #00000000);
+  background-image: linear-gradient(180deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.812), rgba(0, 0, 0, 0.612), rgba(0, 0, 0, 0.287), rgba(0, 0, 0, 0));
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: fixed;
   width: 100%;
+  backdrop-filter: blur(5px);
+  z-index: 5;
 }
 .left-nav {
   font-family: "Noto Sans", sans-serif;
   font-size: 1.5rem;
   background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 .right-nav {
   font-family: "Noto Sans", sans-serif;
@@ -81,10 +87,12 @@ ul > li {
   margin-left: 50px;
   background-color: rgba(0, 0, 0, 0);
 }
+.left-nav > a,
 ul > li > a {
   text-decoration: none;
   background-color: rgba(0, 0, 0, 0);
 }
+.left-nav > a:hover,
 ul > li > a:hover {
   color: rgb(255, 177, 31);
 }
@@ -119,10 +127,12 @@ ul > li > a:hover {
   align-items: center;
   height: 90vh;
   font-size: 3rem;
-  margin-top: 50px;
+  padding-top: 50px;
 }
 .home-right > img {
   border-radius: 50px;
+  padding: 5px;
+  border: 5px solid rgb(255, 177, 31);
 }
 #name {
   color: rgb(255, 177, 31);
@@ -141,11 +151,12 @@ ul > li > a:hover {
     margin: 20px;
     font-size: 2.2rem;
     margin: 0;
+    margin-top: 50px;
+  }
+  #home{
+  margin-top: 30px;
 
   }
-  #home {
-    margin-top: 50px;
-}
   .home-right > img {
     height: 250px;
     aspect-ratio: 16/11;
@@ -155,6 +166,7 @@ ul > li > a:hover {
 /* ABOUT */
 
 .heading {
+  padding-top: 100px;
   font-size: 4rem;
   font-family: "Bebas Neue", sans-serif;
   margin-left: 8.5vw;
@@ -216,7 +228,6 @@ ul > li > a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 15vh;
 }
 .projects {
   display: flex;
@@ -229,6 +240,7 @@ ul > li > a:hover {
 .ph {
   display: flex;
   flex-direction: column;
+  align-items: center;
   box-shadow: 10px 0px 10px rgb(0, 18, 73);
   width: 355px;
   height: 200px;
@@ -238,6 +250,11 @@ ul > li > a:hover {
   border-radius: 10px;
   padding: 10px;
   border: 2px solid rgb(255, 177, 31);
+}
+.wrapper-ph{
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .ph > h4,
 .p-info {
@@ -249,6 +266,7 @@ ul > li > a:hover {
   text-align: center;
   padding-bottom: 5px;
   font-size: 1.2rem;
+  margin-top: 10px;
 }
 .p-info {
   text-align: justify;
@@ -278,7 +296,7 @@ ul > li > a:hover {
   margin-bottom: 100px;
 }
 .edu {
-  margin-bottom: 20vh;
+  margin-bottom: 100px;
 }
 .edu-container {
   width: 99vw;
@@ -438,7 +456,7 @@ textarea {
   padding: 20px;
 }
 .socials > img {
-  background-color: #eddbff;
+  background-color: #eddbffca;
   height: 40px;
   border-radius: 50%;
   padding: 1px;
