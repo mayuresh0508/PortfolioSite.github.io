@@ -99,6 +99,7 @@ ul > li > a:hover {
 .hamburger{
   position: absolute; 
   right: 1rem;
+  top: 1.6rem;
   display: none;
   flex-direction: column;
   justify-content: space-between;
