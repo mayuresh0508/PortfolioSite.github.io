@@ -330,10 +330,13 @@ ul > li > a:hover {
     flex-direction: column;
     height: 100%;
   }
-  @media (max-width: 750px){
-    #projects{
-      padding-top: 100px;
-    }
+}
+@media (max-width: 750px){
+  #projects{
+    padding-top: 100px;
+  }
+  .pro-c{
+    height: 750px;
   }
 }
 
