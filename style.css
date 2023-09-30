@@ -479,6 +479,8 @@ textarea {
 .btn {
   padding: 20px;
   background-color: rgba(255, 177, 31, 0);
+  display: flex;
+  justify-content: center;
 }
 .button {
   background-color: #000428;

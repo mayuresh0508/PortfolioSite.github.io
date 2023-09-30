@@ -49,3 +49,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+emailjs.init("871V-lcACOT5UneYq");
+
+document.getElementById("sendButton").addEventListener("click", function () {
+  const userName = document.getElementById("userName").value;
+  const userEmail = document.getElementById("userEmail").value;
+  const userText = document.getElementById("userText").value;
+
+  // Replace "your_email_service_id" with the actual ID of your EmailJS service
+  const emailServiceID = "service_8mm0238";
+
+  // Replace "your_email_template_id" with the actual ID of your EmailJS template
+  const emailTemplateID = "template_uq11xbc";
+
+  // Parameters to populate the template content
+  const templateParams = {
+    user_name: userName,
+    user_email: userEmail,
+    user_text: userText
+  };
+
+  // Send the email using EmailJS
+  emailjs.send(emailServiceID, emailTemplateID, templateParams)
+    .then(function (response) {
+      alert("Thanks for Contacting... I will reach to you soon :)");
+    }, function (error) {
+      alert("Unable to send the Message");
+    });
+});
+
+
+
